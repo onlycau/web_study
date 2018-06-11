@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>delimit element</title>
+</head>
+<body>
+
+<!-- 1.Defines the item if the title arrtibute of the element <abbr> is set.-->
+<p><dfn title="World Health Organization">WHO </dfn>founded in 1948.</p>
+
+<!---2.If the element <dfn> contains an element <abbr> with a title
+ ,titile defines the item.-->
+
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> founded in 1048.</p>
+
+<!-- Otherwise ,the <dfn> text content is the item,and the 
+parent element contains definition.-->
+<p><dfn>WHO</dfn> World Health Organization founded in 1948.</p>
+
+</body>
+</html>
