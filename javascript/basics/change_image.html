@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("bulb_on"))
+  {
+  element.src="../images/bulb_off.gif";
+  }
+else
+  {
+  element.src="../images/bulb_on.gif";
+  }
+}
+</script>
+
+<img id="myimage" onclick="changeImage()" src="../images/bulb_off.gif">
+
+<p>Click on the light bulb to light or extinguish the light</p>
+
+</body>
+</html>

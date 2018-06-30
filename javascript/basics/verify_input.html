@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>A paragraph of JavaScript</h1>
+
+<p>Please enter the number,if the input value is not a number,the browser will pop up a prompt box</p>
+
+<input id="demo" type="text">
+
+<script>
+function myFunction()
+{
+var x=document.getElementById("demo").value;
+if(x==""||isNaN(x))
+  {
+  alert("Not Numeric");
+  }
+}
+</script>
+
+<button type="button" onclick="myFunction()">click here</button>
+
+</body>
+</html>

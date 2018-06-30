@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document.write</title>
+  <style type="text/css">
+    h1 {color: red;text-align: center}
+    p {color: green}
+    button {color:purple}
+  </style>
+  <script type="text/javascript">
+    function myFunction()
+    {
+      document.write("<h1 style=\"color:red;text-align:center\"></br>Bad!Document disappeared.</h1>")
+    }
+  </script>
+</head>
+<body>
+
+<p>JavaScript can write directly to the HTML output stream:</p>
+
+<script type="text/javascript">
+  document.write("<h1>This is a heading</h1>");
+  document.write("<p>This is a paragraph.</p>");
+</script>
+
+<p>
+  You can only use document.write in the HTML output stream.If you use it(for example,in a function) after the document has been loaded,it will cover the entire document.
+</p>
+
+<button onclick="myFunction()">click here</button>
+
+</body>
+</html>

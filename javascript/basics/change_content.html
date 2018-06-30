@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body {background-image: url(../images/starry_sky.jpg);}
+    h1 {color: red}
+    p {color: blue}
+    button {color: green}
+  </style>
+</head>
+<body>
+
+<h1>JavaScript</h1>
+
+<p id="demo">
+JavaScript can change the content of HTML elements.
+</p>
+
+<script>
+function myFunction()
+{
+x=document.getElementById("demo");  //find element
+x.innerHTML="Hello JavaScript!";    //change content
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click here</button>
+
+</body>
+</html>
