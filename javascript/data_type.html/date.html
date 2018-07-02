@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>date</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  //date of the day
+  document.write(Date())
+
+  //getTime() returns the number of milliseconds since january1,1970
+  var d=new Date()
+  document.write("</br>"+d.getTime()+" ms have passed since 1970/01/01.");
+
+  //set specific dates using setFullYear().
+  d.setFullYear(1992,10,3)
+  document.write("</br>"+d)
+
+  //use toUTCString() to convert the date of the day (basedon UTC) to a string.
+  document.write("</br>"+d.toUTCString())
+
+  //Use getDay() and an array to display the week
+  var weekday=new Array(7)
+  weekday[0]="Sunday"
+  weekday[1]="Monday"
+  weekday[2]="Tuesday"
+  weekday[3]="Wednesday"
+  weekday[4]="Thursday"
+  weekday[5]="Friday"
+  weekday[6]="Saturday"
+  document.write("</br>"+"Today is " + weekday[d.getDay()])
+
+
+</script>
+
+</body>
+</html>

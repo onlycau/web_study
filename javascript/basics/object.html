@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Objects</title>
+</head>
+<body>
+
+  <p>Click the button below to loop through the properties of the object "person"</p>
+  <button onclick="myFunction()">click here</button>
+  <p id="demo"></p>
+
+<script>
+  person=new Object();
+  person.firstname="Bill";
+  person.lastname="Gates";
+  person.age=56;
+  person.eyecolor="blue";
+  document.write(person.firstname+" is "+person.age+" years old.")
+
+//use object literals
+  person2={firstname:"john",lastname:"Doe",age:50,eyecolor:"blue"};
+  document.write("</br>"+person2.firstname+" is "+person2.age+" years old.")
+
+//use function
+  function myPerson(firstname,lastname,age,eyecolor)
+  {
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+    this.changeName=changeName;
+    function changeName(name)
+    {
+      this.firstname=name;
+    }
+  }
+  var person3=new myPerson("Bill","Gates",56,"blue");
+  person3.changeName("Ballmer")
+  document.write("</br>"+person3.firstname+" is "+person3.age+" years old.");
+
+//for in
+  function myFunction()
+  {
+    var x;
+    var txt="";
+    for (x in person)
+    {
+      txt=txt+person[x];
+    }
+    document.getElementById("demo").innerHTML=txt;
+  }
+
+</script>
+
+</body>
+</html>
+

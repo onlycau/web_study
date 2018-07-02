@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var patt1=new RegExp("e");
+  document.write(patt1.test("The best things in life are free")+"</br>");
+  document.write(patt1.exec("The best things in life are free")+"</br>");
+  patt1.compile("d");
+  document.write(patt1.test("The best things in life are free")+"</br>")
+
+  var patt2=new RegExp("e","g");
+  do
+  {
+    result=patt2.exec("The best things in life are free");
+    document.write(result);
+  }
+  while (result!=null)
+</script>
+
+</body>
+</html>
