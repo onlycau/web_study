@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    p {color: green}
+    #mess {color: red}
+  </style>
+</head>
+<body>
+
+<script>
+function myFunction()
+{
+try
+{ 
+var x=document.getElementById("demo").value;
+if(x=="")    throw "value is empty";
+if(isNaN(x)) throw "not a number";
+if(x>10)     throw "too big";
+if(x<5)      throw "too small";
+else 
+  {var y=document.getElementById("mess");
+    y.innerHTML="right";
+  }
+}
+catch(err)
+{
+var y=document.getElementById("mess");
+y.innerHTML="error: " + err + "。";
+}
+}
+</script>
+
+<h1>My first JavaScript program</h1>
+<p>Please enter a number between 5 and 10:</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">test inpput value</button>
+<p id="mess"></p>
+
+</body>
+</html>

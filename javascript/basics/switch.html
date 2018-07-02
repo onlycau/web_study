@@ -1,0 +1,36 @@
+<html>
+<head>
+  <style type="text/css">
+    button {color: red}
+  </style>
+</head>
+<body>
+
+<p>Click on the button below and a message based on today's date will be displayed:</p>
+
+<button onclick="myFunction()">click here</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var d=new Date().getDay();
+switch (d)
+  {
+  case 6:
+    x="Today it's Saturday";
+    break;
+  case 0:
+    x="Today it's Sunday";
+    break;
+  default:
+    x="Looking forward to the Weekend";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>

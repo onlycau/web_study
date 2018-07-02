@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onload and Onunload</title>
+</head>
+<body onload="checkCookies()" onunload="alert('the onunload event was triggered')">
+
+<script>
+
+  function checkCookies()
+  {
+    if (navigator.cookieEnabled==true)
+    {
+      alert("Cookie enabled.")
+    }
+    else
+    {
+      alert("Cookie not enabled.")
+    }
+  }
+</script>
+
+<p>The prompt box will tell you if the browser has cookies enabled.</p>
+
+</body>
+</html>

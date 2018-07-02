@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onmouseover and Onmouseout</title>
+  <style type="text/css">
+    div{
+      background-color: green;
+      color: green;
+      width: 120px;
+      height: 20px;
+      padding: 40px;
+      text-align: center;
+      color: red;
+    }
+  </style>
+  <script type="text/javascript">
+    function mOver(obj)
+    {obj.innerHTML="Thanks"}
+    function mOut(obj)
+    {obj.innerHTML="Move mouse over"}
+  </script>
+</head>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)">Move mouse over</div>
+
+</body>
+</html>
