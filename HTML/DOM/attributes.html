@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>attributes</title>
+  <style type="text/css">
+    p {color: red}
+  </style>
+</head>
+<body>
+
+<h1 id="intro">Hello World!</h1>
+
+<p id="note">It's inner HTML attribute:</p>
+
+<script type="text/javascript">
+  var txt=document.getElementById("intro").innerHTML;
+  document.write(txt);
+  document.write("</br><p>It's nodeName attribute:</p>")
+  document.write(document.getElementById("intro").nodeName)
+  document.write("<p>It's nodeValue attribute:</p>")
+  document.write(document.getElementById("intro").firstChild.nodeValue);
+</script>
+
+</body>
+</html>

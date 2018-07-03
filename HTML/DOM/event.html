@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS events</title>
+  <style type="text/css">
+    #mouse {
+      background-color: green;
+      width: 200px;
+      height: 50px;
+      padding-top: 25px;
+      text-align: center;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function checkCookies()
+    {
+    if (navigator.cookieEnabled==true)
+      {
+      alert("Cookies are enabled")
+      }
+    else
+      {
+      alert("Cookies are not enabled")
+      }
+    }
+    function ucfirst(id)
+    {
+      var str=id.value.toLowerCase();
+      var strarr=str.split(' ');
+      var result='';
+      for (var i in strarr)
+      {
+        result+=strarr[i].substring(0,1).toUpperCase()+strarr[i].substring(1)+' '
+      }
+      id.value=result;
+    }
+    function changetext(id)
+    {
+      id.innerHTML="Hello!"
+    }
+    function displayDate()
+    {
+      document.getElementById("date").innerHTML=Date()
+    }
+
+    function mOver(obj)
+    {
+      obj.innerHTML="Thanks you!"
+    }
+    function mOut(obj)
+    {
+      obj.innerHTML="Mouse over me"
+    }
+
+  </script>
+</head>
+<body onload="checkCookies()">
+
+<h1 onclick="this.innerHTML='hello!'">please click this paragraph.</h1>
+
+<h1 onclick="changetext(this)">Please click this paragraph.</h1>
+
+<div>
+  please enter your English name:<input type="text" id="fname" onchange="ucfirst(this)"/>
+</div>
+
+<p>click this button to excute displayDate() function.</p>
+<p id="date"></p>
+
+<button onclick="displayDate()">try</button>
+
+<div id="mouse" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse over me</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modify element</title>
+</head>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is a another paragraph.</p>
+</div>
+
+<input type="button" onclick="myDelete()" value="Delete p2"/>
+
+<input type="button" onclick="myReplace()" value="replace p1"/>
+
+<script type="text/javascript">
+  //appendChild
+  var para1=document.createElement("p");
+  var node1=document.createTextNode("appendChild:This is new.");
+  para1.appendChild(node1);
+  var element=document.getElementById("div1");
+  element.appendChild(para1);
+  //insertBefore
+  var para2=document.createElement("p");
+  var node2=document.createTextNode("insertBefore:THis is new.");
+  para2.appendChild(node2);
+  var child=document.getElementById("p1")
+  element.insertBefore(para2,child);
+
+  function myDelete()
+  {
+  var parent=document.getElementById("div1");
+  var child2=document.getElementById("p2");
+  parent.removeChild(child2);
+  }
+
+  function myReplace()
+  {
+    var child3=document.getElementById("p1");
+    var para3=document.createElement("p");
+    var node3=document.createTextNode("replacechild:This is new.")
+    para3.appendChild(node3);
+    child3.parentNode.replaceChild(para3,child3)
+  }
+
+
+</script>
+
+</body>
+</html>

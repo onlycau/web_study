@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navagation</title>
+</head>
+<body>
+
+<div id="intro">This is div1.
+<p>This is p1.</p>
+<p>This is p2.</p>
+</div>
+
+<div>click this button to display all body's innerHTML<button onclick="myBody()">click this</button></div>
+
+<script type="text/javascript">
+  var x=document.getElementsByTagName("p");
+  document.write("The innerHTML of the second paragraph is: "+x[1].innerHTML);
+  document.write("<br/><br/>All paragraphs:<br/>")
+  for (i=0;i<x.length;i++)
+  {
+    document.write("<br/>"+x[i].innerHTML);
+  }
+  x=document.getElementById("intro");
+  document.write("<br/><br/>&lt;div&gt;'s firstChild:<br/>"+x.firstChild.nodeValue);
+  function myBody()
+  {
+    document.write(document.body.innerHTML);
+  }
+</script>
+
+</body>
+</html>

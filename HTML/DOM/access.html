@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Access HTML Elements</title>
+</head>
+<body>
+
+<p class="z">Test text:<h1 id="intro">Hello World!</h1></p>
+
+<p>method getElementById:1</p>
+<p>method getElementByTagName:2</p>
+<p>method getElementsByClassName:3</p>
+
+<script type="text/javascript">
+  x=document.getElementById("intro");
+  document.write("<p>1:"+x.innerHTML+"</p>")
+  y=document.getElementsByTagName("p");
+  document.write("2:first paragraph -" + y[0].innerHTML);
+  z=document.getElementsByClassName("z");
+  document.write("<p>3:firs paragraph:</p>"+z[0].innerHTML);
+</script>
+
+</body>
+</html>
